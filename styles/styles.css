@@ -1,0 +1,29 @@
+/***** Reset *****/
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/***** Variables *****/
+
+/***** Fonts *****/
+
+/***** Header *****/
+
+/***** Mobile *****/
+
+/***** Desktop *****/
+
+/***** Footer *****/
+.b-attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.b-attribution a {
+  color: hsl(228, 45%, 44%);
+}
