@@ -1,35 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="./styles/reset.css">
-  <link rel="stylesheet" href="./styles/styles.css">
-  
-  <title>Frontend Mentor | Product preview card component</title>
-  <style>
-    
-  </style>
-</head>
-<body>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/styles.css" />
 
-  Perfume
+    <title>Frontend Mentor | Product preview card component</title>
+    <style></style>
+  </head>
+  <body>
+    <main>
+      <article class="card">
+        <figure>
+          <img
+            class="card__img"
+            src="./images/image-product-mobile.jpg"
+            alt="a purfume bottle on display"
+          />
+        </figure>
+        <div class="card__content">
+          <span class="card__product-type">Perfume</span>
 
-  Gabrielle Essence Eau De Parfum
+          <h1 class="card__title">Gabrielle Essence Eau De Parfum</h1>
 
-  A floral, solar and voluptuous interpretation composed by Olivier Polge, 
-  Perfumer-Creator for the House of CHANEL.
+          <p class="card__description">
+            A floral, solar and voluptuous interpretation composed by Olivier
+            Polge, Perfumer-Creator for the House of CHANEL.
+          </p>
 
-  $149.99
-  $169.99
+          <div class="card__price-wrapper">
+            <span class="card__price card__price--current">$149.99</span>
+            <span class="card__price card__price--old"><s>$169.99</s></span>
+          </div>
 
-  Add to Cart
-  
-  <div class="b-attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#" target="_blank">Your Name Here</a>.
-  </div>
-</body>
+          <button class="card__button">
+            <img
+              class="card__button__icon"
+              src="./images/icon-cart.svg"
+              alt=""
+            />Add to Cart
+          </button>
+        </div>
+      </article>
+    </main>
+
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://www.frontendmentor.io/profile/Dasaru" target="_blank"
+        >Dallas Berry</a
+      >.
+    </footer>
+  </body>
 </html>

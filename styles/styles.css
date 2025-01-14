@@ -10,20 +10,134 @@ html {
 
 /***** Variables *****/
 
+:root {
+  --primary-color: hsl(158, 36%, 37%);
+  --background-color: hsl(30, 38%, 92%);
+
+  --text-dark: hsl(212, 21%, 14%);
+  --text-medium: hsl(228, 12%, 48%);
+}
+
 /***** Fonts *****/
+
+@font-face {
+  font-family: "Fraunces";
+  src: url("../font/Fraunces-VariableFont.ttf");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../font/Montserrat-VariableFont.ttf");
+}
 
 /***** Header *****/
 
 /***** Mobile *****/
 
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100svh;
+  background-color: var(--background-color, #aaa);
+}
+
+.card {
+  width: 34.3rem;
+  background-color: white;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.card__img {
+  width: 100%;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.card__content {
+  display: flex;
+  flex-direction: column;
+  padding: 2.4rem 2.4rem 2.8rem;
+  gap: 1.6rem;
+}
+
+.card__product-type {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
+  color: var(--text-medium, black);
+}
+
+.card__title {
+  font-family: "Fraunces", sans-serif;
+  font-size: 3.2rem;
+  line-height: 3.2rem;
+  font-weight: bold;
+}
+
+.card__description {
+  font-family: "Monserrat", sans-serif;
+  font-size: 1.4rem;
+  line-height: 2.3rem;
+  letter-spacing: 0.1rem;
+  color: var(--text-medium, black);
+}
+
+.card__price-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.card__price {
+}
+
+.card__price--current {
+  font-family: "Fraunces", sans-serif;
+  font-size: 3.2rem;
+  font-weight: bold;
+  line-height: 3.2rem;
+  color: var(--primary-color, darkgreen);
+}
+
+.card__price--old {
+  font-family: "Monserrat", sans-serif;
+  font-size: 1.3rem;
+  line-height: 2.3rem;
+  color: var(--text-medium, black);
+}
+
+.card__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Monserrat", sans-serif;
+  font-weight: bold;
+  font-size: 1.4rem;
+  background-color: var(--primary-color, darkgreen);
+  color: white;
+  padding: 1.5rem;
+  border: none;
+  border-radius: 0.8rem;
+}
+
+.card__button__icon {
+  margin-right: 1rem;
+}
+
 /***** Desktop *****/
 
 /***** Footer *****/
-.b-attribution {
+.attribution {
   font-size: 11px;
   text-align: center;
+  position: fixed;
+  bottom: 10px;
 }
 
-.b-attribution a {
+.attribution a {
   color: hsl(228, 45%, 44%);
 }
