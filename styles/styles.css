@@ -13,9 +13,9 @@ html {
 :root {
   --primary-color: hsl(158, 36%, 37%);
   --background-color: hsl(30, 38%, 92%);
-
   --text-dark: hsl(212, 21%, 14%);
   --text-medium: hsl(228, 12%, 48%);
+  --button-hover: #1a4032;
 }
 
 /***** Fonts *****/
@@ -29,8 +29,6 @@ html {
   font-family: "Montserrat";
   src: url("../font/Montserrat-VariableFont.ttf");
 }
-
-/***** Header *****/
 
 /***** Mobile *****/
 
@@ -54,6 +52,11 @@ body {
 .card__img {
   width: 100%;
   border-radius: 1rem 1rem 0 0;
+}
+
+.card__figcaption {
+  position: absolute;
+  visibility: hidden;
 }
 
 .card__content {
@@ -92,10 +95,7 @@ body {
   gap: 2rem;
 }
 
-.card__price {
-}
-
-.card__price--current {
+.card__price-current {
   font-family: "Fraunces", sans-serif;
   font-size: 3.2rem;
   font-weight: bold;
@@ -103,10 +103,11 @@ body {
   color: var(--primary-color, darkgreen);
 }
 
-.card__price--old {
+.card__price-old {
   font-family: "Monserrat", sans-serif;
   font-size: 1.3rem;
   line-height: 2.3rem;
+  font-weight: 500;
   color: var(--text-medium, black);
 }
 
@@ -130,12 +131,36 @@ body {
 
 /***** Desktop *****/
 
+@media (min-width: 90rem) {
+  .card {
+    width: 60rem;
+    flex-direction: row;
+  }
+
+  .card__img {
+    border-radius: 1rem 0 0 1rem;
+    width: 30rem;
+    height: 100%;
+  }
+
+  .card__content {
+    padding: 3.2rem;
+    width: 30rem;
+    justify-content: space-between;
+  }
+
+  .card__button:hover {
+    background-color: var(--button-hover, darkgreen);
+    cursor: pointer;
+  }
+}
+
 /***** Footer *****/
 .attribution {
-  font-size: 11px;
+  font-size: 1.1rem;
   text-align: center;
   position: fixed;
-  bottom: 10px;
+  bottom: 1rem;
 }
 
 .attribution a {
